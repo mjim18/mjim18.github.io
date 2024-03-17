@@ -1,182 +1,68 @@
 <!DOCTYPE html>
-<html>
-<h1>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>3 Column Layout</title>
-	<style type="text/css">
-
-		/* Layout */
-		body {
-			min-width: 630px;
-		}
-
-		#container {
-			padding-left: 200px;
-			padding-right: 190px;
-		}
-		
-		#container .column {
-			position: relative;
-			float: left;
-		}
-		
-		#center {
-			padding: 10px 20px;
-			width: 100%;
-		}
-		
-		#left {
-			width: 180px;
-			padding: 0 10px;
-			right: 240px;
-			margin-left: -100%;
-		}
-		
-		#right {
-			width: 130px;
-			padding: 0 10px;
-			margin-right: -100%;
-		}
-		
-		#footer {
-			clear: both;
-		}
-		
-		/* IE hack */
-		* html #left {
-			left: 150px;
-		}
-
-		/* Make the columns the same height as each other */
-		#container {
-			overflow: hidden;
-		}
-
-		#container .column {
-			padding-bottom: 1001em;
-			margin-bottom: -1000em;
-		}
-
-		/* Fix for the footer */
-		* html body {
-			overflow: hidden;
-		}
-		
-		* html #footer-wrapper {
-			float: left;
-			position: relative;
-			width: 100%;
-			padding-bottom: 10010px;
-			margin-bottom: -10000px;
-			background: #fff;
-		}
-
-		/* Aesthetics */
-		body {
-			margin: 0;
-			padding: 0;
-			font-family:Sans-serif;
-			line-height: 1.5em;
-		}
-		
-		p {
-			color: #555;
-		}
-
-		nav ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		
-		nav ul a {
-			color: darkgreen;
-			text-decoration: none;
-		}
-
-		#header, #footer {
-			font-size: large;
-			padding: 0.3em;
-			background: #BCCE98;
-		}
-
-		#left {
-			background: #DAE9BC;
-		}
-		
-		#right {
-			background: #F7FDEB;
-		}
-
-		#center {
-			background: #fff;
-		}
-
-		#container .column {
-			padding-top: 1em;
-		}
-		
-	</style>
-	
-	<script type="text/javascript">
-		/* =============================
-		This script generates sample text for the body content. 
-		You can remove this script and any reference to it. 
-		 ============================= */
-		var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-		function generateText(sentenceCount){
-			for (var i=0; i<sentenceCount; i++)
-			document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-		}
-	</script>	
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-
 <body>
-
-	<header id="header"><p>Header...</p></header>
-
-	<div id="container">
-
-		<main id="center" class="column">
-			<article>
-			
-				<h1>Heading</h1>
-				<p><script>generateText(50)</script></p>
-			
-			</article>								
-		</main>
-
-		<nav id="left" class="column">
-			<h3>Left heading</h3>
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
-				<li><a href="#">Link 5</a></li>
-			</ul>
-			<h3>Left heading</h3>
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="#">Link 4</a></li>
-				<li><a href="#">Link 5</a></li>
-			</ul>
-
-		</nav>
-
-		<div id="right" class="column">
-			<h3>Right heading</h3>
-			<p><script>generateText(1)</script></p>
-		</div>
-
-	</div>
-
-	<div id="footer-wrapper">
-		<footer id="footer"><p>Footer...</p></footer>
-	</div>
-
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>This is where you can write about yourself, your skills, experience, and any other relevant information.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here you can showcase your projects with descriptions and maybe links to their demos or repositories.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can provide your contact information here, such as email address or social media links.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
 </body>
-
 </html>
